@@ -2,7 +2,7 @@ include "Dependencies.lua"
 
 workspace "CalyxEngine"
 	architecture "x64"
-    startproject "sandbox"
+  startproject "Sandbox"
 
 	configurations
 	{
