@@ -1,0 +1,142 @@
+#include "cxpch.h"
+#ifdef CX_EDITOR
+#include "Calyx/Editor/Panels/SceneHierarchyPanel.h"
+#include "Calyx/Editor/EditorLayer.h"
+
+#include <imgui.h>
+
+namespace Calyx {
+
+	void SceneHierarchyPanel::OnImGuiRender()
+	{
+		ImGui::Begin("Hierarchy");
+
+		Scene* activeScene = GetActiveScene();
+
+		if (!activeScene)
+		{
+			ImGui::End();
+			return;
+		}
+
+		ImGui::Dummy(ImGui::GetWindowSize());
+		ImGui::SetCursorPos({ 0, 25 });
+		if (ImGui::BeginDragDropTarget())
+		{
+			if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("SCENE_HIERARCHY_ENTITY"))
+			{
+				Entity dragTarget = *(Entity*)payload->Data;
+				dragTarget.PopHierarchy();
+			}
+			ImGui::EndDragDropTarget();
+		}
+		ImGui::Dummy({ 0, 2 });
+
+
+		for (Entity entity : activeScene->m_Root)
+		{
+			DrawEntityTreeNode(entity);
+		}
+
+		static Entity treeNodeHovered; // persist state
+		if (ImGui::IsWindowHovered() && ImGui::IsMouseClicked(1))
+		{
+			treeNodeHovered = m_TreeNodeHovered;
+			ImGui::OpenPopup("hierarchy_popup");
+		}
+
+		if (ImGui::IsWindowHovered() && ImGui::IsMouseClicked(0) && !m_TreeNodeHovered)
+			EditorLayer::SelectEntity({});
+
+		if (ImGui::BeginPopup("hierarchy_popup"))
+		{
+			if (!treeNodeHovered)
+			{
+				if (ImGui::MenuItem("Create Entity"))
+					EditorLayer::SelectEntity(activeScene->CreateEntity());
+			}
+			else
+			{
+				if (ImGui::MenuItem("Create Child Entity"))
+					EditorLayer::SelectEntity(treeNodeHovered.CreateChildEntity("Entity"));
+			}
+			ImGui::EndPopup();
+		}
+
+		m_TreeNodeHovered = Entity{};
+		ImGui::End();
+	}
+
+
+	void SceneHierarchyPanel::DrawEntityTreeNode(Entity entity)
+	{
+		if (!entity.IsValid())
+			return;
+
+		auto& relationship = entity.GetComponent<RelationshipComponent>();
+		Scene* activeScene = GetActiveScene();
+		Entity selectedEntity = GetSelectedEntity();
+
+		ImGuiTreeNodeFlags flags = ImGuiTreeNodeFlags_SpanAvailWidth | ImGuiTreeNodeFlags_OpenOnArrow;
+
+		if (selectedEntity == entity)
+			flags |= ImGuiTreeNodeFlags_Selected;
+
+		if (relationship.First == entt::null)
+			flags |= ImGuiTreeNodeFlags_Leaf;
+
+		ImGui::SetCursorPosX(ImGui::GetCursorPosX() + 10.0f);
+
+		bool isPrefab = entity.HasComponent<PrefabComponent>();
+
+		if (isPrefab) ImGui::PushStyleColor(ImGuiCol_Text, IM_COL32(255, 225, 0, 255));
+		bool opened = ImGui::TreeNodeEx((void*)(uint64_t)(uint32_t)entity, flags, entity.GetTag().c_str());
+		if (isPrefab) ImGui::PopStyleColor();
+
+		if (ImGui::IsItemHovered() && ImGui::IsMouseDragging(0))
+		{
+			if (ImGui::BeginDragDropSource())
+			{
+				ImGui::SetDragDropPayload("SCENE_HIERARCHY_ENTITY", (void*)&entity, sizeof(Entity));
+				ImGui::EndDragDropSource();
+			}
+		}
+
+		if (ImGui::BeginDragDropTarget())
+		{
+			if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("SCENE_HIERARCHY_ENTITY"))
+			{
+				Entity dragTarget = *(Entity*)payload->Data;
+				if (!dragTarget.IsParentOf(entity))
+				{
+					dragTarget.PopHierarchy();
+					entity.AddChildEntity(dragTarget);
+				}
+			}
+			ImGui::EndDragDropTarget();
+		}
+
+		if (ImGui::IsItemHovered())
+			m_TreeNodeHovered = entity;
+
+		if (ImGui::IsItemClicked())
+			EditorLayer::SelectEntity(entity);
+
+		if (opened)
+		{
+			if (relationship.ChildrenCount)
+			{
+				auto current = relationship.First;
+				for (uint32_t i = 0; i < relationship.ChildrenCount; i++)
+				{
+					Entity e{ current, activeScene };
+					DrawEntityTreeNode(e);
+					current = e.GetComponent<RelationshipComponent>().Next;
+				}
+			}
+			ImGui::TreePop();
+		}
+	}
+
+}
+#endif // CX_EDITOR

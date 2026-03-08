@@ -1,0 +1,17 @@
+[
+    {
+        "file_path": "level-sheet.png",
+        "tile_width": 32,
+        "tile_height": 32
+    },
+    {
+        "file_path": "portal-sheet.png",
+        "tile_width": 64,
+        "tile_height": 64
+    },
+    {
+        "file_path": "character.png",
+        "tile_width": 48,
+        "tile_height": 48
+    }
+]

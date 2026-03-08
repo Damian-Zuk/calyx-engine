@@ -1,0 +1,67 @@
+{
+    "Tag": "Ball",
+    "UUID": 8825705037770810944,
+    "PrefabUUID": 8825705037770810944,
+    "Transform": {
+        "Rotation": 0.0,
+        "Scale": [
+            1.0,
+            1.0
+        ]
+    },
+    "Network": {
+        "SimulateOnClient": true,
+        "SyncMethod": "Interpolation",
+        "CullDistance": 30.0,
+        "TeleportThreshold": 0.5,
+        "ReconcileThreshold": 0.02500000037252903,
+        "ReconcileMaxTime": 0.05000000074505806
+    },
+    "Script": [
+        {
+            "ClassName": "DynamicExtrapolation",
+            "Fields": {
+                "InterpolationThreshold": 0.10000000149011612,
+                "SwitchCooldownTime": 0.25,
+                "Enable": true,
+                "AlphaVisualize": false
+            }
+        }
+    ],
+    "Sprite": {
+        "Color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "Texture": "basketball.png",
+        "FilterMode": 1,
+        "Flip": [
+            false,
+            false
+        ]
+    },
+    "Rigidbody": {
+        "Type": 2,
+        "LinearDamping": 0.0,
+        "AngularDamping": 0.0,
+        "GravityScale": 1.0,
+        "IsBullet": false,
+        "FixedRotation": false,
+        "AttachToParent": false
+    },
+    "CircleCollider": {
+        "Offset": [
+            0.0,
+            0.0
+        ],
+        "Radius": 1.0,
+        "Friction": 0.5,
+        "Restitution": 0.75,
+        "RestitutionThreshold": 0.5,
+        "Density": 1.0,
+        "IsSensor": false,
+        "AttachToParent": false
+    }
+}

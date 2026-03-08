@@ -1,0 +1,28 @@
+#include "cxpch.h"
+#include "Calyx/Network/Messages.h"
+
+namespace Calyx {
+
+	std::string MessageTypeToString(MessageType packetType)
+	{
+		switch (packetType)
+		{
+		case MessageType::None:
+			return "MessageType::None";
+		case MessageType::Handshake:
+			return "MessageType::Handshake";
+		case MessageType::HandshakeReply:
+			return "MessageType::HandshakeReply";
+		case MessageType::EntitySpawn:
+			return "MessageType::EntitySpawn";
+		case MessageType::EntityDespawn:
+			return "MessageType::EntityDespawn";
+		case MessageType::EntityReplicate:
+			return "MessageType::EntityReplicate";
+		case MessageType::CustomMessage:
+			return "MessageType::CustomMessage";
+		}
+		return "MessageType::<Invalid>";
+	}
+
+}

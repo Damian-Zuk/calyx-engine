@@ -1,0 +1,1506 @@
+{
+    "EnableNetworking": true,
+    "EnablePhysics": true,
+    "ScreenClearColor": [
+        0.20795999467372894,
+        0.24135999381542206,
+        0.28957998752593994,
+        1.0
+    ],
+    "GravityForce": 9.800000190734863,
+    "VelocityIterations": 2,
+    "PositionIterations": 6,
+    "GameScript": {
+        "ClassName": "MyGameMode"
+    },
+    "Entities": [
+        {
+            "Tag": "Boxes",
+            "UUID": 13959622637432332777,
+            "Transform": {
+                "Position": [
+                    2.5441999435424805,
+                    5.088399887084961,
+                    0.0
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "Box Pyramid",
+                    "UUID": 1998900885840038321,
+                    "PrefabUUID": 14944450881489412473,
+                    "Transform": {
+                        "Position": [
+                            -32.91999816894531,
+                            -4.578455924987793,
+                            0.0
+                        ]
+                    },
+                    "Entities": [
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 11309341501607915563,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 14701298359871991650,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 7387123662093378101,
+                            "RefUUID": 13354842933019866472,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 15438196554520576912,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 10211274848783889899,
+                            "RefUUID": 1632370206785755669,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 10400984957175558069,
+                            "RefUUID": 790571345433179382,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 6519003904482552859,
+                            "RefUUID": 7517296099090891129,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 7058615444671703614,
+                            "RefUUID": 14026987546665502381,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 8626266861353994724,
+                            "RefUUID": 6425022796393166508,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 6655870196298361998,
+                            "RefUUID": 1193494120807706944,
+                            "PrefabUUID": 15395898022612884793
+                        }
+                    ]
+                },
+                {
+                    "Tag": "Box Pyramid",
+                    "UUID": 8709249660562036380,
+                    "PrefabUUID": 14944450881489412473,
+                    "Transform": {
+                        "Position": [
+                            -23.821102142333984,
+                            -4.546751976013184,
+                            0.0
+                        ]
+                    },
+                    "Entities": [
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 2763032777626719085,
+                            "RefUUID": 1193494120807706944,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 2499248836150754675,
+                            "RefUUID": 6425022796393166508,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 16697099289233571703,
+                            "RefUUID": 14026987546665502381,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 8146237238238034529,
+                            "RefUUID": 7517296099090891129,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 1854600938616841231,
+                            "RefUUID": 790571345433179382,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 10222058298973222743,
+                            "RefUUID": 1632370206785755669,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 17227923987525714128,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 11547221715230324270,
+                            "RefUUID": 13354842933019866472,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 1512013022460030932,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 9431302082208945227,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        }
+                    ]
+                },
+                {
+                    "Tag": "Box Pyramid",
+                    "UUID": 3788721917862710717,
+                    "PrefabUUID": 14944450881489412473,
+                    "Transform": {
+                        "Position": [
+                            -14.785611152648926,
+                            -4.546751976013184,
+                            0.0
+                        ]
+                    },
+                    "Entities": [
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 16506996348744467547,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 5508182644992989432,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 10078932051652883925,
+                            "RefUUID": 13354842933019866472,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 221075513362344153,
+                            "RefUUID": 12251715737328922967,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 17049621367139104161,
+                            "RefUUID": 1632370206785755669,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 13378142719551991140,
+                            "RefUUID": 790571345433179382,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 4201842919517880650,
+                            "RefUUID": 7517296099090891129,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 75050206031769847,
+                            "RefUUID": 14026987546665502381,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 16225281863409520718,
+                            "RefUUID": 6425022796393166508,
+                            "PrefabUUID": 15395898022612884793
+                        },
+                        {
+                            "Tag": "Wooden Box",
+                            "UUID": 13709879355419298724,
+                            "RefUUID": 1193494120807706944,
+                            "PrefabUUID": 15395898022612884793
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Tag": "Balls",
+            "UUID": 7237620364551866148,
+            "Transform": {
+                "Position": [
+                    -4.746719837188721,
+                    12.450420379638672,
+                    0.0
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "Ball",
+                    "UUID": 12925078290479238733,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -76.1282730102539,
+                            -8.8362398147583,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 10423172896531184870,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -76.1282730102539,
+                            -8.8362398147583,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 5260709206397294722,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -77.23625183105469,
+                            -5.171390056610107,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 313377876609578257,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -75.61691284179688,
+                            -3.2111198902130127,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 13346143685205052389,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -78.4294662475586,
+                            -2.0179100036621094,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 3303289999861936611,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -77.5771713256836,
+                            0.7094299793243408,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 7399834716805132462,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            58.39699172973633,
+                            -11.148630142211914,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 4773089092522413153,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            57.12567901611328,
+                            -8.500080108642578,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 9594149563634945092,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            60.1450309753418,
+                            -7.705510139465332,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 10877502936294982548,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -0.45392999053001404,
+                            -2.938110113143921,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 1947374674195284778,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            0.4611800014972687,
+                            -0.23013000190258026,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 17850045012418360754,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -2.06003999710083,
+                            -1.107890009880066,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "Ball",
+                    "UUID": 980639337095229366,
+                    "PrefabUUID": 8825705037770810944,
+                    "Transform": {
+                        "Position": [
+                            -1.910640001296997,
+                            0.9277600049972534,
+                            0.0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Tag": "Terrain",
+            "UUID": 13169798382823687644,
+            "Transform": {
+                "Position": [
+                    4.426730155944824,
+                    6.790820121765137,
+                    0.0
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "Block",
+                    "UUID": 17555960388265391369,
+                    "Transform": {
+                        "Position": [
+                            -48.1993408203125,
+                            -10.7908296585083,
+                            0.061000000685453415
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            200.0,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 255,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9980000257492065,
+                            0.8270000219345093
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 5227670715635369126,
+                    "Transform": {
+                        "Position": [
+                            -11.498510360717773,
+                            0.16080999374389648,
+                            0.06400000303983688
+                        ],
+                        "Rotation": -36.599998474121094,
+                        "Scale": [
+                            5.190000057220459,
+                            1.7000000476837158
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 255,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9399999976158142,
+                            0.5600000023841858
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 6708694409942740429,
+                    "Transform": {
+                        "Position": [
+                            -0.2797299921512604,
+                            -9.159090042114258,
+                            0.06800000369548798
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            15.449999809265137,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 53,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9769999980926514,
+                            0.8700000047683716
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 8550948480518090155,
+                    "Transform": {
+                        "Position": [
+                            52.415138244628906,
+                            -5.186399936676025,
+                            0.06199999898672104
+                        ],
+                        "Rotation": -31.0,
+                        "Scale": [
+                            2.0399999618530273,
+                            11.279999732971191
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 99,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9399999976158142,
+                            0.9599999785423279
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 12620259618982116208,
+                    "Transform": {
+                        "Position": [
+                            -8.219940185546875,
+                            -9.763310432434082,
+                            0.0729999989271164
+                        ],
+                        "Rotation": 35.79999923706055,
+                        "Scale": [
+                            3.0,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 52,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9399999976158142,
+                            0.8999999761581421
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 18144928035304173614,
+                    "Transform": {
+                        "Position": [
+                            9.244379997253418,
+                            -9.683659553527832,
+                            0.0689999982714653
+                        ],
+                        "Rotation": -20.0,
+                        "Scale": [
+                            4.920000076293945,
+                            2.490000009536743
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 52,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9900000095367432,
+                            0.9100000262260437
+                        ],
+                        "Offset": [
+                            0.0,
+                            -0.07000000029802322
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 12379424859158186847,
+                    "Transform": {
+                        "Position": [
+                            53.566001892089844,
+                            0.343860000371933,
+                            0.061000000685453415
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            30.0,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 255,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9900000095367432,
+                            0.8399999737739563
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 17238766076207921823,
+                    "Transform": {
+                        "Position": [
+                            -72.86570739746094,
+                            0.6902199983596802,
+                            0.06400000303983688
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            20.0,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 255,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9760000109672546,
+                            0.8730000257492065
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 8317274679175069656,
+                    "Transform": {
+                        "Position": [
+                            -87.96753692626953,
+                            -6.492959976196289,
+                            0.05700000002980232
+                        ],
+                        "Rotation": -57.400001525878906,
+                        "Scale": [
+                            10.0,
+                            3.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 255,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9760000109672546,
+                            0.8730000257492065
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 14179153820005035802,
+                    "Transform": {
+                        "Position": [
+                            66.18241119384766,
+                            12.597490310668945,
+                            0.06700000166893005
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            3.0,
+                            24.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 55,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9760000109672546,
+                            0.9980000257492065
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                },
+                {
+                    "Tag": "Block",
+                    "UUID": 15827205039673201433,
+                    "Transform": {
+                        "Position": [
+                            -145.65948486328125,
+                            1.3183499574661255,
+                            0.06700000166893005
+                        ],
+                        "Rotation": 0.0,
+                        "Scale": [
+                            3.0,
+                            24.0
+                        ]
+                    },
+                    "ResizableSprite": {
+                        "TileScale": 1.0,
+                        "Edges": 55,
+                        "Offset": [
+                            0,
+                            0
+                        ],
+                        "PatternSize": [
+                            3,
+                            3
+                        ],
+                        "Color": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Spritesheet": "level-sheet.png"
+                    },
+                    "Rigidbody": {
+                        "Type": 0,
+                        "LinearDamping": 0.0,
+                        "AngularDamping": 0.0,
+                        "GravityScale": 1.0,
+                        "IsBullet": false,
+                        "FixedRotation": false,
+                        "AttachToParent": false
+                    },
+                    "BoxCollider": {
+                        "Size": [
+                            0.9760000109672546,
+                            0.984000027179718
+                        ],
+                        "Offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "Friction": 0.5,
+                        "Restitution": 0.0,
+                        "RestitutionThreshold": 0.5,
+                        "Density": 1.0,
+                        "IsSensor": false,
+                        "AttachToParent": false
+                    }
+                }
+            ]
+        },
+        {
+            "Tag": "Platforms",
+            "UUID": 13942381985595828420,
+            "Transform": {
+                "Position": [
+                    31.460979461669922,
+                    3.5840799808502197,
+                    0.0
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.0,
+                    1.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 16179334520031741483,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            10.52556037902832,
+                            4.368810176849365,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 16714500177107562018,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            6.286509990692139,
+                            3.635190010070801,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 8673458746376781120,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            2.049499988555908,
+                            2.55676007270813,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 15613413959793449680,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            -1.9992200136184692,
+                            1.4394400119781494,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 13019043679641705379,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            -6.043869972229004,
+                            0.3194099962711334,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 3110778952621036794,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            -10.60923957824707,
+                            -0.7350900173187256,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 12530644837773684450,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            -15.136899948120117,
+                            -1.8193000555038452,
+                            0.0
+                        ]
+                    }
+                },
+                {
+                    "Tag": "GrassPlatform",
+                    "UUID": 9894218215616310150,
+                    "PrefabUUID": 13619582391534006965,
+                    "Transform": {
+                        "Position": [
+                            -19.930110931396484,
+                            -2.7853500843048096,
+                            0.0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Tag": "Spawn Points",
+            "UUID": 15259453226492148115,
+            "PrefabUUID": 14964778866578642001,
+            "Transform": {
+                "Position": [
+                    4.122439861297607,
+                    0.7335900068283081,
+                    0.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "PlayerSpawn0",
+                    "UUID": 11378186956649936329,
+                    "RefUUID": 4228852946507038501
+                },
+                {
+                    "Tag": "PlayerSpawn1",
+                    "UUID": 6779470812656332310,
+                    "RefUUID": 779781961570109279
+                },
+                {
+                    "Tag": "PlayerSpawn2",
+                    "UUID": 650964016120384582,
+                    "RefUUID": 18277456767722596498
+                },
+                {
+                    "Tag": "PlayerSpawn3",
+                    "UUID": 7908438958561631007,
+                    "RefUUID": 6669721361522134344
+                }
+            ]
+        },
+        {
+            "Tag": "TestFrame1",
+            "UUID": 16265654493706208478,
+            "PrefabUUID": 1971257877241672137,
+            "Transform": {
+                "Position": [
+                    52.65631103515625,
+                    14.32688045501709,
+                    0.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "Balls",
+                    "UUID": 4751074794335260806,
+                    "RefUUID": 5521481089688524595,
+                    "Entities": [
+                        {
+                            "Tag": "Ball",
+                            "UUID": 17361958241263728939,
+                            "RefUUID": 14596149196641209207,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 17383447967786986993,
+                            "RefUUID": 12414504559682079817,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 5478072209636470532,
+                            "RefUUID": 5862236366416448600,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 1277239903801178266,
+                            "RefUUID": 8492849030633898537,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 835588832419254061,
+                            "RefUUID": 5723520203068875079,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 11238636042182716999,
+                            "RefUUID": 12760988971917993922,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 7108052334227810243,
+                            "RefUUID": 16522013339396598283,
+                            "PrefabUUID": 8825705037770810944
+                        },
+                        {
+                            "Tag": "Ball",
+                            "UUID": 6185797952646782309,
+                            "RefUUID": 9750081567992004269,
+                            "PrefabUUID": 8825705037770810944
+                        }
+                    ]
+                },
+                {
+                    "Tag": "Walls",
+                    "UUID": 8452169873654995526,
+                    "RefUUID": 5112716431700157367,
+                    "Entities": [
+                        {
+                            "Tag": "Wall",
+                            "UUID": 5404739970060017917,
+                            "RefUUID": 1773608715315505895
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 8583945826593046043,
+                            "RefUUID": 14359885674159140304
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 3275796202961972546,
+                            "RefUUID": 3805326882639377003
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 5024784925605948475,
+                            "RefUUID": 11993108664537601768
+                        }
+                    ]
+                },
+                {
+                    "Tag": "Bouncer",
+                    "UUID": 3932589683131464380,
+                    "RefUUID": 16596457412405440189,
+                    "Entities": [
+                        {
+                            "Tag": "BouncerPart1",
+                            "UUID": 2751855747754401568,
+                            "RefUUID": 15937879237103137291
+                        },
+                        {
+                            "Tag": "BouncerPart2",
+                            "UUID": 10042236835128897388,
+                            "RefUUID": 13383190383099056429
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Tag": "TestFrame2",
+            "UUID": 9151114516146657282,
+            "PrefabUUID": 5306419330787304281,
+            "Transform": {
+                "Position": [
+                    64.15580749511719,
+                    16.178489685058594,
+                    0.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "BallGroup",
+                    "UUID": 3489736905971743414,
+                    "RefUUID": 8736345216724971373
+                },
+                {
+                    "Tag": "BallDespawn",
+                    "UUID": 768919926897091648,
+                    "RefUUID": 17493635495663250999
+                },
+                {
+                    "Tag": "BallSpawn",
+                    "UUID": 14147032734371295635,
+                    "RefUUID": 5549876788439531059
+                },
+                {
+                    "Tag": "Walls",
+                    "UUID": 13159248731100727527,
+                    "RefUUID": 14361732350806808561,
+                    "Entities": [
+                        {
+                            "Tag": "Wall",
+                            "UUID": 3112132210960350135,
+                            "RefUUID": 9945372516559490408
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 3544981372987136494,
+                            "RefUUID": 3969303205934835826
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 3964835194428916507,
+                            "RefUUID": 9929685602456655946
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 8813284536367432948,
+                            "RefUUID": 7268780695572175683
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 16696010273455867450,
+                            "RefUUID": 5083264774289584985
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 10580185366473451729,
+                            "RefUUID": 14491276956146842972
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 10072831142365960632,
+                            "RefUUID": 15320952207932349660
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 17642979343121848310,
+                            "RefUUID": 11880256767427146725
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 12378404136827781050,
+                            "RefUUID": 9280194414120189764
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 9327683642209990132,
+                            "RefUUID": 17230023251027205665
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 14598297640122242105,
+                            "RefUUID": 10144356576662526730
+                        },
+                        {
+                            "Tag": "Wall",
+                            "UUID": 17494014025901317264,
+                            "RefUUID": 5022107672066104247
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Tag": "BG_Jungle",
+            "UUID": 16826734924695373314,
+            "PrefabUUID": 6383938310703728781,
+            "Transform": {
+                "Position": [
+                    -87.13275909423828,
+                    10.153159141540527,
+                    0.0
+                ]
+            },
+            "Entities": [
+                {
+                    "Tag": "bg-1",
+                    "UUID": 15883407872246795584,
+                    "RefUUID": 12284726750826723804
+                },
+                {
+                    "Tag": "bg-2",
+                    "UUID": 10873320795328089607,
+                    "RefUUID": 1781000163515116299
+                },
+                {
+                    "Tag": "bg-3",
+                    "UUID": 12391724300195897188,
+                    "RefUUID": 1618581998629472234
+                },
+                {
+                    "Tag": "bg-4",
+                    "UUID": 216268638164520611,
+                    "RefUUID": 9694981766443183024
+                },
+                {
+                    "Tag": "bg-5",
+                    "UUID": 12357652536886396948,
+                    "RefUUID": 5505843171098659658
+                }
+            ]
+        }
+    ]
+}

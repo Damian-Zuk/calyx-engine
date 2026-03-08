@@ -1,0 +1,8 @@
+{
+    "Fonts": {
+        "FiraCode": {
+            "FontFilepath": "editor/content/font/FiraCode-Regular.ttf",
+            "FontSize": 18.0
+        }
+    }
+}

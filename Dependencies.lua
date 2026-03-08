@@ -1,0 +1,12 @@
+IncludeDir = {}
+IncludeDir["GLFW"] = "%{wks.location}/vendor/GLFW/include"
+IncludeDir["glad"] = "%{wks.location}/vendor/glad/include"
+IncludeDir["glm"] = "%{wks.location}/vendor/glm"
+IncludeDir["ImGui"] = "%{wks.location}/vendor/imgui"
+IncludeDir["stb"] = "%{wks.location}/vendor/stb"
+IncludeDir["entt"] = "%{wks.location}/vendor/entt/src"
+IncludeDir["json"] = "%{wks.location}/vendor/json"
+IncludeDir["box2d"] = "%{wks.location}/vendor/box2d/include"
+IncludeDir["msdfgen"] = "%{wks.location}/vendor/msdf-atlas-gen/msdfgen"
+IncludeDir["msdf_atlas_gen"] = "%{wks.location}/vendor/msdf-atlas-gen/msdf-atlas-gen"
+IncludeDir["GameNetworkingSockets"] = "%{wks.location}/vendor/GameNetworkingSockets/include"

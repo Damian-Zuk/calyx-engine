@@ -1,0 +1,79 @@
+#pragma once
+
+class ColorHueAnimation : public EntityScript
+{
+public:
+	ENTITY_SCRICX_CLASS(ColorHueAnimation)
+
+	virtual void OnPreInit() override
+	{
+		REGISTER_FIELD(Bool, m_BackAndForth);
+		REGISTER_FIELD(Float, m_Speed);
+		REGISTER_FIELD(Float, m_Saturation);
+		REGISTER_FIELD_NO_EDIT(Float, m_HueRangeP);
+		REGISTER_FIELD_NO_EDIT(Float, m_HueRangeQ);
+	}
+
+	virtual bool OnCreate() override
+	{
+		if (HasComponent<SpriteComponent>())
+			GetComponent<SpriteComponent>().Color = glm::vec4{ 1.0f };
+
+		if (HasComponent<ResizableSpriteComponent>())
+			GetComponent<ResizableSpriteComponent>().Color = glm::vec4{ 1.0f };
+
+		if (HasComponent<CircleRendererComponent>())
+			GetComponent<CircleRendererComponent>().Color = glm::vec4{ 1.0f };
+		
+		return true;
+	}
+
+	virtual void OnUpdate(float ts) override
+	{
+		if (HasComponent<SpriteComponent>())
+			UpdateHue(ts, GetComponent<SpriteComponent>().Color);
+
+		if (HasComponent<ResizableSpriteComponent>())
+			UpdateHue(ts, GetComponent<ResizableSpriteComponent>().Color);
+
+		if (HasComponent<CircleRendererComponent>())
+			UpdateHue(ts, GetComponent<CircleRendererComponent>().Color);
+	}
+
+	void UpdateHue(float ts, glm::vec4& colorRGBA)
+	{
+		glm::vec4 colorHSV = Utils::Graphics::RGBAtoHSV(colorRGBA);
+		float hue = glm::clamp(colorHSV[0] + m_Speed * m_Direction * ts, m_HueRangeP, m_HueRangeQ);
+		if (hue == m_HueRangeQ)
+		{
+			if (m_BackAndForth)
+			{
+				m_Direction = -1.0f;
+				hue -= 0.001f;
+			}
+			else
+				hue = m_HueRangeP;
+		}
+		else if (m_BackAndForth && hue == m_HueRangeP)
+			m_Direction = 1.0f;
+
+		colorHSV[0] = hue;
+		colorHSV[1] = m_Saturation;
+		colorRGBA = Utils::Graphics::HSVtoRGBA(colorHSV);
+	}
+
+	virtual void OnImGuiRender() override
+	{
+	#ifdef CX_EDITOR
+		ImGui::DragFloatRange2("HueRange", &m_HueRangeP, &m_HueRangeQ, 0.001f, 0.0f, 1.0f);
+	#endif
+	}
+
+private:
+	bool m_BackAndForth = false;
+	float m_Speed = 0.5f;
+	float m_Saturation = 0.8f;
+	float m_HueRangeP = 0.0f;
+	float m_HueRangeQ = 1.0f;
+	float m_Direction = 1.0f;
+};

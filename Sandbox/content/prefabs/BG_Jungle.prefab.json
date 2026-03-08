@@ -1,0 +1,209 @@
+{
+    "Tag": "BG_Jungle",
+    "UUID": 6383938310703728781,
+    "PrefabUUID": 6383938310703728781,
+    "Transform": {
+        "Rotation": 0.0,
+        "Scale": [
+            1.0,
+            1.0
+        ]
+    },
+    "Entities": [
+        {
+            "Tag": "bg-1",
+            "UUID": 12284726750826723804,
+            "Transform": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    -0.10400000214576721
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.7777800559997559,
+                    1.0
+                ]
+            },
+            "Script": [
+                {
+                    "ClassName": "ParallaxBackground",
+                    "Fields": {
+                        "m_PositionOffset": 0.0,
+                        "m_ParallaxFactor": 0.0
+                    }
+                }
+            ],
+            "Sprite": {
+                "Texture": "bg-jungle\\plx-1.png",
+                "FilterMode": 0,
+                "Flip": [
+                    false,
+                    false
+                ],
+                "Color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "Tag": "bg-2",
+            "UUID": 1781000163515116299,
+            "Transform": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    -0.10300000011920929
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.7777800559997559,
+                    1.0
+                ]
+            },
+            "Script": [
+                {
+                    "ClassName": "ParallaxBackground",
+                    "Fields": {
+                        "m_PositionOffset": 0.0,
+                        "m_ParallaxFactor": 0.04500000178813934
+                    }
+                }
+            ],
+            "Sprite": {
+                "Texture": "bg-jungle\\plx-2.png",
+                "FilterMode": 0,
+                "Flip": [
+                    false,
+                    false
+                ],
+                "Color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "Tag": "bg-3",
+            "UUID": 1618581998629472234,
+            "Transform": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    -0.10199999809265137
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.7777800559997559,
+                    1.0
+                ]
+            },
+            "Script": [
+                {
+                    "ClassName": "ParallaxBackground",
+                    "Fields": {
+                        "m_PositionOffset": 0.0,
+                        "m_ParallaxFactor": 0.0949999988079071
+                    }
+                }
+            ],
+            "Sprite": {
+                "Texture": "bg-jungle\\plx-3.png",
+                "FilterMode": 0,
+                "Flip": [
+                    false,
+                    false
+                ],
+                "Color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "Tag": "bg-4",
+            "UUID": 9694981766443183024,
+            "Transform": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    -0.10100000351667404
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.7777800559997559,
+                    1.0
+                ]
+            },
+            "Script": [
+                {
+                    "ClassName": "ParallaxBackground",
+                    "Fields": {
+                        "m_PositionOffset": 0.0,
+                        "m_ParallaxFactor": 0.17000000178813934
+                    }
+                }
+            ],
+            "Sprite": {
+                "Texture": "bg-jungle\\plx-4.png",
+                "FilterMode": 0,
+                "Flip": [
+                    false,
+                    false
+                ],
+                "Color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "Tag": "bg-5",
+            "UUID": 5505843171098659658,
+            "Transform": {
+                "Position": [
+                    0.0,
+                    0.0,
+                    -0.10000000149011612
+                ],
+                "Rotation": 0.0,
+                "Scale": [
+                    1.7777800559997559,
+                    1.0
+                ]
+            },
+            "Script": [
+                {
+                    "ClassName": "ParallaxBackground",
+                    "Fields": {
+                        "m_PositionOffset": 0.0,
+                        "m_ParallaxFactor": 0.2199999988079071
+                    }
+                }
+            ],
+            "Sprite": {
+                "Texture": "bg-jungle\\plx-5.png",
+                "FilterMode": 0,
+                "Flip": [
+                    false,
+                    false
+                ],
+                "Color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        }
+    ]
+}

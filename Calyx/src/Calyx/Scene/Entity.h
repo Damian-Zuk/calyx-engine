@@ -1,0 +1,198 @@
+#pragma once
+
+#include "Calyx/Core/Base.h"
+#include "Calyx/Scene/Components.h"
+#include "Calyx/Scene/Scene.h"
+
+namespace Calyx {
+
+	// Entity class wrapper for the EnTT ECS
+	class Entity
+	{
+	public:
+		Entity() = default;
+		Entity(entt::entity handle, Scene* scene);
+
+		virtual ~Entity() = default;
+
+		template <typename TComponent>
+		TComponent& GetComponent() const
+		{
+			CX_CORE_ASSERT(HasComponent<TComponent>(), "Entity does not have component!");
+			return m_Scene->m_Registry.get<TComponent>(m_Handle);
+		}
+
+		template <typename TComponent, typename... TArgs>
+		TComponent& AddComponent(TArgs&& ...args) const
+		{
+			CX_CORE_ASSERT(!HasComponent<TComponent>(), "Entity already have component!");
+			auto& component = m_Scene->m_Registry.emplace<TComponent>(m_Handle, std::forward<TArgs>(args)...);
+			m_Scene->OnComponentAdded<TComponent>(*this, component);
+			return component;
+		}
+
+		template<typename TComponent, typename... TArgs>
+		TComponent& AddOrReplaceComponent(TArgs&&... args)
+		{
+			auto& component = m_Scene->m_Registry.emplace_or_replace<TComponent>(m_Handle, std::forward<TArgs>(args)...);
+			m_Scene->OnComponentAdded<TComponent>(*this, component);
+			return component;
+		}
+
+		template <typename TComponent>
+		bool HasComponent() const
+		{
+			return m_Scene->m_Registry.any_of<TComponent>(m_Handle);
+		}
+
+		template <typename... TComponents>
+		bool HasComponents() const
+		{
+			return m_Scene->m_Registry.all_of<TComponents...>(m_Handle);
+		}
+
+		template <typename... TComponents>
+		bool HasAnyComponent() const
+		{
+			return m_Scene->m_Registry.any_of<TComponents...>(m_Handle);
+		}
+
+		template <typename TComponent>
+		void RemoveComponent()
+		{
+			CX_CORE_ASSERT(HasComponent<TComponent>(), "Entity does not have a component!");
+
+			if (std::is_base_of<ScriptComponent, TComponent>::value)
+				DestroyAllScripts();
+
+			if (std::is_base_of<CameraComponent, TComponent>::value
+				&& m_Scene->m_PrimaryCameraEntity == *this)
+			{
+				CX_CORE_WARN("Scene Primary Camera has been removed!");
+				m_Scene->m_PrimaryCameraEntity = entt::null;
+				m_Scene->m_PrimaryCamera = nullptr;
+			}
+
+			m_Scene->m_Registry.remove<TComponent>(m_Handle);
+		}
+
+		template <typename TScriptClass>
+		EntityScript* AddScript() const
+		{
+			if (!HasComponent<ScriptComponent>())
+				AddComponent<ScriptComponent>();
+
+			auto& component = GetComponent<ScriptComponent>();
+			const std::string& className = TScriptClass::__ScriptClassName;
+			if (component.Scripts.find(className) != component.Scripts.end())
+				delete component.Scripts[className];
+
+			EntityScript*& script = component.Scripts[className];
+			script = new TScriptClass();
+			script->m_GameInstance = m_Scene->m_GameInstance;
+			script->m_Scene = m_Scene;
+			script->m_Handle = m_Handle;
+			script->OnPreInit();
+
+			return script;
+		}
+
+		void RemoveScript(const std::string& scriptClassName);
+
+		bool HasScript(const std::string& scriptClassName) const;
+		
+		template<typename TScriptClass>
+		bool HasScript() const
+		{
+			return HasScript(TScriptClass::__ScriptClassName);
+		}
+		
+		template<typename TEntityScript>
+		TEntityScript* As()
+		{
+			auto& component = GetComponent<ScriptComponent>();
+			Script* script = component.Scripts.at(TEntityScript::__ScriptClassName);
+			return script->As<TEntityScript>();
+		}
+
+		template<typename TGameScript>
+		TGameScript* GetGameScript()
+		{
+			return m_Scene->GetGameScript()->As<TGameScript>();
+		}
+
+		// Entity lifetime
+		bool IsValid();
+		void Destroy();
+
+		// Scene hierarchy
+		Entity CreateChildEntity(const std::string& name) const;
+		void AddChildEntity(Entity child, bool refreshChildWorldPosition = true) const;
+		void DestroyChildEntities() const;
+		void PopHierarchy() const;
+		bool IsParentOf(Entity entity) const;
+		Entity GetParent() const;
+		Entity FindChildByTag(const std::string& name);
+
+		// Component getters
+		Scene* GetScene() const;
+		UUID GetUUID() const;
+		UUID GetPrefabUUID() const;
+		const std::string& GetTag() const;
+		TransformComponent& GetTransform() const;
+		Sprite& GetSprite() const;
+		glm::vec4& GetColor() const;
+		SpriteAnimation& GetSpriteAnimation() const;
+		b2Body* GetRuntimeBody() const;
+
+		// Transform modifiers
+		void SetWorldPosition(const glm::vec3& position) const;
+		void SetWorldPosition(const glm::vec2& position) const;
+		void SetLocalPosition(const glm::vec3& position) const;
+		void SetLocalPosition(const glm::vec2& position) const;
+		void SetRotationCenter(float angle) const;
+		void RotateCenter(float angle) const;
+
+		// Box2D body related methods
+		bool IsRigidbodyInitialized() const;
+		glm::vec2 GetLinearVelocity() const;
+		void SetLinearVelocity(float x_mps, float y_mps) const;
+		void SetLinearVelocityX(float mps) const;
+		void SetLinearVelocityY(float mps) const;
+		void ApplyLinearImpulse(const glm::vec2& impulse, const glm::vec2& point = {0.0f, 0.0f}) const;
+		void SetRigidbodyTransform(const glm::vec2& position, float rotation) const;
+
+		// Network
+		bool IsNetworked() const;
+		NetSyncMethod GetNetSyncMethod() const;
+		bool HasNetworkPrediction() const;
+
+		// Operator overloads
+		operator uint32_t() const { return (uint32_t)m_Handle; }
+		operator entt::entity() const { return m_Handle; }
+		operator bool() const { return m_Handle != entt::null; }
+		bool operator==(const Entity& other) const { return other.m_Handle == m_Handle; }
+		bool operator!=(const Entity& other) const { return !(other == *this); }
+
+	private:
+		void DestroyAllScripts();
+
+	private:
+		entt::entity m_Handle = entt::null;
+		Scene* m_Scene = nullptr;
+
+		friend class Scene;
+		friend class SceneSerializer;
+		friend class EntityScript;
+		friend class PhysicsWorld;
+		friend class PhysicsContactListener;
+		friend struct PhysicsContact;
+		friend class Server;
+		friend class NetReplicator;
+
+		friend class EditorLayer;
+		friend class InspectorPanel;
+		friend class SceneViewportPanel;
+	};
+
+}
