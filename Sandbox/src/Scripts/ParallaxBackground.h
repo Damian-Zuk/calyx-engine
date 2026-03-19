@@ -3,7 +3,7 @@
 class ParallaxBackground : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(ParallaxBackground)
+	ENTITY_SCRIPT_CLASS(ParallaxBackground)
 
 	virtual void OnPreInit() override;
 	virtual bool OnCreate() override;

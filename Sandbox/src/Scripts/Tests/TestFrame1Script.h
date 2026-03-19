@@ -3,7 +3,7 @@
 class TestFrame1Script : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(TestFrame1Script)
+	ENTITY_SCRIPT_CLASS(TestFrame1Script)
 
 	virtual void OnPreInit() override;
 	virtual bool OnCreate() override;

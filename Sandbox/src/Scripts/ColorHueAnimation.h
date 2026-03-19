@@ -3,7 +3,7 @@
 class ColorHueAnimation : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(ColorHueAnimation)
+	ENTITY_SCRIPT_CLASS(ColorHueAnimation)
 
 	virtual void OnPreInit() override
 	{

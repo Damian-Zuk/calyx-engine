@@ -69,7 +69,7 @@ namespace Calyx {
 		void Client_SendCustomMessage(const NetworkStreamWriterDelegate& delegate) const;
 		void Server_SendCustomMessage(ClientID clientID, const NetworkStreamWriterDelegate& delegate) const;
 
-		virtual const std::string& GetScriptClassName() = 0; // Implemented by `_SCRICX_GENERATED_BODY` macro.
+		virtual const std::string& GetScriptClassName() = 0; // Implemented by `_SCRIPT_GENERATED_BODY` macro.
 	
 	private:
 		void SetFieldValueData(const std::string& fieldName, void* value);

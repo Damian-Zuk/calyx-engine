@@ -3,7 +3,7 @@
 class RedPlatform : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(RedPlatform)
+	ENTITY_SCRIPT_CLASS(RedPlatform)
 
 	void OnPreInit() override;
 	bool OnCreate() override;

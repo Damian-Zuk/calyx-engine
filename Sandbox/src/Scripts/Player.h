@@ -30,7 +30,7 @@ struct PlayerInputState
 class Player : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(Player)
+	ENTITY_SCRIPT_CLASS(Player)
 
 	virtual void OnPreInit() override;
 	virtual bool OnCreate() override;

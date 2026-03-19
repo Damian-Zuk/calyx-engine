@@ -7,7 +7,7 @@ namespace Calyx {
 	class AppScriptDefault : public AppScript
 	{
 	public:
-		APP_SCRICX_CLASS(AppScriptDefault);
+		APP_SCRIPT_CLASS(AppScriptDefault);
 
 		AppScriptDefault() = default;
 		virtual ~AppScriptDefault() = default;

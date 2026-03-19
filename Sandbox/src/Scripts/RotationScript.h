@@ -4,7 +4,7 @@
 class RotationScript : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(RotationScript)
+	ENTITY_SCRIPT_CLASS(RotationScript)
 
 	virtual void OnPreInit() override 
 	{

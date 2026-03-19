@@ -10,7 +10,7 @@ enum class GameMessageType : uint16_t
 class MyGameMode : public GameScript
 {
 public:
-	GAME_SCRICX_CLASS(MyGameMode)
+	GAME_SCRIPT_CLASS(MyGameMode)
 
 	virtual bool OnCreate() override;
 	virtual void OnUpdate(float ts) override;

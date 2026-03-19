@@ -38,23 +38,26 @@ namespace Calyx {
 	};
 }
 
-#define _SCRICX_GENERATED_BODY(scriptClass) \
+#define _SCRIPT_GENERATED_BODY(scriptClass) \
 	static inline const std::string __ScriptClassName = #scriptClass; \
 	virtual const std::string& GetScriptClassName() override { return __ScriptClassName; } \
 
-#define ENTITY_SCRICX_CLASS(scriptClass) _SCRICX_GENERATED_BODY(scriptClass) \
+#define ENTITY_SCRIPT_CLASS(scriptClass) \
+	_SCRIPT_GENERATED_BODY(scriptClass) \
 	static inline const bool __FactoryRegistered = \
 		Calyx::ScriptFactory::Get().RegisterEntityScript(__ScriptClassName, \
 			[&](Calyx::Entity entity){ return entity.AddScript<scriptClass>(); } \
 		); \
 
-#define GAME_SCRICX_CLASS(scriptClass) _SCRICX_GENERATED_BODY(scriptClass) \
+#define GAME_SCRIPT_CLASS(scriptClass) \
+	_SCRIPT_GENERATED_BODY(scriptClass) \
 	static inline const bool __FactoryRegistered = \
 		Calyx::ScriptFactory::Get().RegisterGameScript(__ScriptClassName, \
 			[&](Calyx::Scene* scene){ return scene->SetGameScript<scriptClass>(); } \
 		); \
 
-#define APP_SCRICX_CLASS(scriptClass) _SCRICX_GENERATED_BODY(scriptClass) \
+#define APP_SCRIPT_CLASS(scriptClass) \
+	_SCRIPT_GENERATED_BODY(scriptClass) \
 	static inline const bool __FactoryRegistered = \
 		Calyx::ScriptFactory::Get().RegisterAppScript(__ScriptClassName, \
 			[&](Calyx::GameInstance* instance){ return instance->SetAppScript<scriptClass>(); } \

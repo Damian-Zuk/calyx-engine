@@ -7,7 +7,7 @@ namespace Calyx {
 	class GameScriptDefault : public GameScript
 	{
 	public:
-		GAME_SCRICX_CLASS(GameScriptDefault);
+		GAME_SCRIPT_CLASS(GameScriptDefault);
 
 		GameScriptDefault() = default;
 		virtual ~GameScriptDefault() = default;

@@ -3,7 +3,7 @@
 class DynamicExtrapolation : public EntityScript
 {
 public:
-	ENTITY_SCRICX_CLASS(DynamicExtrapolation)
+	ENTITY_SCRIPT_CLASS(DynamicExtrapolation)
 
 	virtual void OnPreInit() override;
 	virtual bool OnCreate() override;
